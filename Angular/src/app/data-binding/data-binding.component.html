@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>Angular modul megoldása</h1>
+            <br>
+            
+            <div><label for="a">A oldal értéke:</label></div>
+            <div><input [(ngModel)]="aoldal" type="number" class="form-control" id="aoldal"></div>
+            <br>
+            <div><label for="b">B oldal értéke:</label></div>
+            <div><input [(ngModel)]="boldal" type="number" class="form-control" id="boldal"></div>
+            <br>
+            <button type="button" class="btn btn-warning form-control" (click)="EredmenyMentes()">Eredmény
+                mentése</button>
+            <br>
+            <br>
+            <div>
+                <p>A téglalap kerülete: {{aoldal * 2 + boldal * 2}}</p>
+                <p>A téglalap területe: {{aoldal * boldal}}</p>
+            </div>
+            <br>
+            <div>
+                <ul *ngFor="let eredmeny of lista">
+                    <li>{{eredmeny.name}}</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
